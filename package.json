@@ -8,7 +8,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no spcoin-hardhat-contract-access-test tests specified\" && exit 1",
+    "preinstall": "echo preinstall spcoin-hardhat-contract-access-test; . ./scripts/installDevSubModules.sh",
+    "postinstall": "echo postinstall spcoin-hardhat-contract-access-test Installation Complete",
+    "installDevModules": "echo Installing SPCOIN-PROJECT-MODULES; . ./scripts/installDevSubModules.sh"
   },
   "author": "",
   "license": "ISC",
