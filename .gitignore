@@ -5,6 +5,7 @@ test.out
 /.deps
 /.vscode/
 .env
+*/.e
 package-lock.json
 
 cache
