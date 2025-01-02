@@ -8,8 +8,7 @@ const {
    year, 
    month, 
    millennium } = require( "../../node_modules-dev/spcoin-back-end/spcoin-access-modules/utils/dateTime"); 
-const JUNK      = require( "ls
-  ")
+
 
    //  millennium } = require( "../../spcoin-access-modules/utils/dateTime"); 
 const { assert } = require ('chai');
