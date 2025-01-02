@@ -5,10 +5,10 @@ const {stringifyBigInt } = require(".@sponsorcoin/spcoin-lib/utils.js");
 const { deployWETH9Contract, deploySpCoinContract, getDeployedArtifactsABIAddress, getWeth9Contract } = require("../lib/deployContract.js");
 
 // Use one of the 4 library's below. 2 are local development and 2 ard NPM installed
-// const { WethMethods, HARDHAT } = require("../../node_modules-dev/bg/spcoin-access-modules/index.js");
+// const { WethMethods, HARDHAT } = require("../../node_modules-dev/spcoin-back-end/spcoin-access-modules/index.js");
 // const { WethMethods, HARDHAT } = require("@sponsorcoin/spcoin-access-modules/accessModules.js");
 // const { WethMethods, HARDHAT }  = require("@sponsorcoin/weth-module/wethMethods");
-const { WethMethods, HARDHAT } = require("../../node_modules-dev/bg/spcoin-weth-module/index");
+const { WethMethods, HARDHAT } = require("../../node_modules-dev/spcoin-back-end/spcoin-weth-module/index");
 
 let signer;
 let weth9Address;
