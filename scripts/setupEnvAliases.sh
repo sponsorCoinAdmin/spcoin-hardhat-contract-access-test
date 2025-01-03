@@ -14,7 +14,7 @@ echo "Adding startup configuration Files to Sponsor Coin environment setup file 
 echo "set -o vi" | tee $ENV_DIR/.e
 echo "export PROJECT_HOME=$PROJECT_HOME" | tee -a $ENV_DIR/.e
 echo "export ENV_DIR=$ENV_DIR" | tee -a $ENV_DIR/.e
-echo "export SPONSOR_COIN_LOGX=$LOGS_DIR" | tee -a $ENV_DIR/.e
+echo "export SPONSOR_COIN_LOG=$LOGS_DIR" | tee -a $ENV_DIR/.e
 echo "export HH_SCRIPTS=$PROJECT_HOME/scripts" | tee -a $ENV_DIR/.e
 echo ". $ENV_DIR/.a" | tee -a $ENV_DIR/.e
 echo m | tee -a $ENV_DIR/.e
