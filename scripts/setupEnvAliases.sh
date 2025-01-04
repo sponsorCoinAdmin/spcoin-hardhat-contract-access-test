@@ -19,7 +19,7 @@ echo "export HH_SCRIPTS=$ACTIVE_PROJECT_PATH/scripts"  | tee -a $ACTIVE_ENV_PATH
 echo ". $ACTIVE_ENV_PATH/.a"                           | tee -a $ACTIVE_ENV_PATH/.e
 # echo m                                                 | tee -a $ACTIVE_ENV_PATH/.e
 
-echo "Adding sponsor coin startup configuration Files to bootstrap file ~/.baschrc"
+echo "Adding sponsor coin startup configuration Files to bootstrap file ~/.bashrc"
 sed -i '/ACTIVE_ENV_PATH/d' ~/.bashrc
 echo "export ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH/.e"                                        | tee -a ~/.bashrc
 echo ". \$ACTIVE_ENV_PATH"                                                               | tee -a ~/.bashrc
