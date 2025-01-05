@@ -12,6 +12,8 @@ echo ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH
 echo LOGS_DIR=$LOGS_DIR
 
 echo "Adding startup configuration Files to Sponsor Coin environment setup file $ACTIVE_ENV_PATH/.e"
+echo "ACTIVE_ROOT_DIR=$ACTIVE_ROOT_DIR"                | tee    $ACTIVE_ENV_PATH/.e
+echo ". $ACTIVE_ROOT_DIR/.env/.e"                      | tee -a $ACTIVE_ENV_PATH/.e
 echo "export ACTIVE_PROJECT_PATH=$ACTIVE_PROJECT_PATH" | tee -a $ACTIVE_ENV_PATH/.e
 echo "export ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH"         | tee -a $ACTIVE_ENV_PATH/.e
 echo "export SPONSOR_COIN_LOG=$LOGS_DIR"               | tee -a $ACTIVE_ENV_PATH/.e
@@ -21,8 +23,10 @@ echo ". $ACTIVE_ENV_PATH/.a"                           | tee -a $ACTIVE_ENV_PATH
 
 echo "Adding sponsor coin startup configuration Files to bootstrap file ~/.bashrc"
 sed -i '/ACTIVE_ENV_PATH/d' ~/.bashrc
-echo "export ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH/.e"                                        | tee -a ~/.bashrc
-echo ". \$ACTIVE_ENV_PATH"                                                               | tee -a ~/.bashrc
+sed -i '/ACTIVE_PROJECT_PATH/d' ~/.bashrc
+echo "export ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH/.e" | tee -a ~/.bashrc
+echo ". \$ACTIVE_ENV_PATH"                        | tee -a ~/.bashrc
+echo "cd \$ACTIVE_PROJECT_PATH"                    | tee -a ~/.bashrc
 
 #echo ". "$ACTIVE_ENV_PATH"/.e" | tee -a ~/.bashrc
 
