@@ -1,36 +1,52 @@
 clear
 echo ==== SETTING UP ENVIRONMENT VARIABLES ====
 export ACTIVE_PROJECT_NAME=$(basename $PWD)
-
-#echo "Configuring SponsorCoin Environment"
+export ACTIVE_ROOT_DIR="$(dirname "$PWD")"
 export ACTIVE_PROJECT_PATH=$PWD
-export ACTIVE_ENV_PATH=$ACTIVE_PROJECT_PATH'/.e'
-export LOGS_DIR=$ACTIVE_ENV_PATH/logs
+export ACTIVE_ENV_DIR=/.e
 
-echo ACTIVE_PROJECT_PATH=$ACTIVE_PROJECT_PATH
-echo ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH
-echo LOGS_DIR=$LOGS_DIR
+# INITIALIZATION FUNCTION FOR BASHRC SETUP
+insertOnce() { 
+    if  grep -q "$1" "$2" ; then
+        echo 'ERROR: LINE:"'$1'" EXISTS IN FILE:"'$2'"' ; 
+    else
+        echo 'INSERTING: LINE:"'$1'" IN FILE:"'$2'"' ; 
+        echo $1 | tee -a $2
+    fi
+}
 
-echo "Adding startup configuration Files to Sponsor Coin environment setup file $ACTIVE_ENV_PATH/.e"
-echo "ACTIVE_ROOT_DIR=$ACTIVE_ROOT_DIR"                | tee    $ACTIVE_ENV_PATH/.e
-echo ". $ACTIVE_ROOT_DIR/.env/.e"                      | tee -a $ACTIVE_ENV_PATH/.e
-echo "export ACTIVE_PROJECT_PATH=$ACTIVE_PROJECT_PATH" | tee -a $ACTIVE_ENV_PATH/.e
-echo "export ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH"         | tee -a $ACTIVE_ENV_PATH/.e
-echo "export SPONSOR_COIN_LOG=$LOGS_DIR"               | tee -a $ACTIVE_ENV_PATH/.e
-echo "export HH_SCRIPTS=$ACTIVE_PROJECT_PATH/scripts"  | tee -a $ACTIVE_ENV_PATH/.e
-echo ". $ACTIVE_ENV_PATH/.a"                           | tee -a $ACTIVE_ENV_PATH/.e
-# echo m                                                 | tee -a $ACTIVE_ENV_PATH/.e
+createNewEnvironmentFile() {
+    export ACTIVE_PROJECT_PATH=$1
+    export ACTIVE_PROJECT_NAME=$2
+    export ACTIVE_ENV_DIR=$3
+    export ACTIVE_ENV_PATH=$ACTIVE_PROJECT_PATH$ACTIVE_ENV_DIR
+    export ACTIVE_ENV_FILE_PATH=$ACTIVE_ENV_PATH/.e
+    echo "#SPCOIN PROJECT CONFIGURATION FILE: $ACTIVE_PROJECT_NAME"                      | tee    $ACTIVE_ENV_FILE_PATH
+    echo "#SPCOIN ENVIRONMENT CONFIGURATION SETUP SCRIPT: $ACTIVE_ENV_FILE_PATH"         | tee -a $ACTIVE_ENV_FILE_PATH
+    echo "export ACTIVE_PROJECT_NAME=$ACTIVE_PROJECT_NAME"                               | tee -a $ACTIVE_ENV_FILE_PATH
+    echo "export ACTIVE_PROJECT_PATH=$ACTIVE_PROJECT_PATH"                               | tee -a $ACTIVE_ENV_FILE_PATH
+    echo "export ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH"                                       | tee -a $ACTIVE_ENV_FILE_PATH
+    echo "export ACTIVE_SCRIPTS_PATH=\$ACTIVE_PROJECT_PATH/scripts"                      | tee -a $ACTIVE_ENV_FILE_PATH
+    echo "export ACTIVE_LOGS_PATH=\$ACTIVE_PROJECT_PATH/logs"                            | tee -a $ACTIVE_ENV_FILE_PATH
+
+
+
+
+
+
+    echo ". \$ACTIVE_ENV_PATH/.a"                                                        | tee -a $ACTIVE_ENV_FILE_PATH
+}
+
+#SET UP BASH ENVIRONMENT
+createNewEnvironmentFile $ACTIVE_PROJECT_PATH $ACTIVE_PROJECT_NAME $ACTIVE_ENV_DIR
+insertOnce "set -o vi" ~/.bashrc;
 
 echo "Adding sponsor coin startup configuration Files to bootstrap file ~/.bashrc"
-sed -i '/ACTIVE_ENV_PATH/d' ~/.bashrc
+sed -i '/ACTIVE_ENV_FILE_PATH/d' ~/.bashrc
 sed -i '/ACTIVE_PROJECT_PATH/d' ~/.bashrc
-echo "export ACTIVE_ENV_PATH=$ACTIVE_ENV_PATH/.e" | tee -a ~/.bashrc
-echo ". \$ACTIVE_ENV_PATH"                        | tee -a ~/.bashrc
-echo "cd \$ACTIVE_PROJECT_PATH"                    | tee -a ~/.bashrc
+echo "export ACTIVE_ENV_FILE_PATH=$ACTIVE_ENV_FILE_PATH" | tee -a ~/.bashrc;
+echo ". \$ACTIVE_ENV_FILE_PATH"                          | tee -a ~/.bashrc;
+echo "cd \$ACTIVE_PROJECT_PATH"                          | tee -a ~/.bashrc;
 
-#echo ". "$ACTIVE_ENV_PATH"/.e" | tee -a ~/.bashrc
-
-echo "Starting The Project Environment"
-. $ACTIVE_ENV_PATH/.e
-cd $CURR_DIR
-echo "***IMPORTANT *** Please ensure the '.env' file is configured for proper operations"
+#RUN THE ENVIRONMENT SETUP
+# . $ACTIVE_ENV_FILE_PATH
