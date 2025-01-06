@@ -9,9 +9,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no spcoin-hardhat-contract-access-test tests specified\" && exit 1",
-    "preinstall": "echo preinstall spcoin-hardhat-contract-access-test; . ./scripts/installDevSubModules.sh",
+    "preinstall": "echo preinstall spcoin-hardhat-contract-access-test; . ./scripts/installNodeSubModules.sh",
     "postinstall": "echo postinstall spcoin-hardhat-contract-access-test Installation Complete",
-    "installDevSubModules": "echo Installing SPCOIN-PROJECT-MODULES; . ./scripts/installDevSubModules.sh"
+    "installNodeSubModules": "echo Installing SPCOIN-PROJECT-MODULES; . ./scripts/installNodeSubModules.sh"
   },
   "author": "",
   "license": "ISC",
