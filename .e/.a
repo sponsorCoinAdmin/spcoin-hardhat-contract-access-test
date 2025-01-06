@@ -5,7 +5,7 @@ alias va="vi \$ACTIVE_ENV_PATH/.a;a"
 alias ve="vi \$ACTIVE_ENV_PATH/.e;e"
 alias vm="vi \$ACTIVE_ENV_PATH/.m;m"
 
-alias cdhh="cd $PROJECT_HOME"
+alias cdhh="cd $ACTIVE_PROJECT_PATH"
 alias cdscr="cdhh; cd scripts"
 alias cddep="cdscr; cd deployments"
 alias sethh="clear; cdhh"
