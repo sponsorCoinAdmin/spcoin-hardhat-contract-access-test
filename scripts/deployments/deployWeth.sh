@@ -1,1 +1,1 @@
-npx hardhat ignition deploy $PROJECT_HOME/ignition/modules/deployWeth.js --network localhost      
+npx hardhat ignition deploy $ACTIVE_PROJECT_PATH/ignition/modules/deployWeth.js --network localhost      

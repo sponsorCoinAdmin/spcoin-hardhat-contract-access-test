@@ -1,13 +1,13 @@
 #INITIALIZE SCRIPT STARTUP
 clear
 CURR_DIR=$(PWD)
-cd $PROJECT_HOME
+cd $ACTIVE_PROJECT_PATH
 SINGLE_LINE="-----------------------------------------------------------------------"
 DOUBLE_LINE="======================================================================="
 echo $DOUBLE_LINE
 echo CHANGING DIRECTORY
 echo from: $CURR_DIR 
-echo to  : $PROJECT_HOME/scripts
+echo to  : $ACTIVE_PROJECT_PATH/scripts
 
 #START HARDHAT
 echo $SINGLE_LINE
@@ -23,7 +23,7 @@ echo $DOUBLE_LINEecho $DOUBLE_LINE
 
 #echo DEPLOYING TOKENS
 #echo $SINGLE_LINE
-#ldeploytokens
+#deploytokens
 #echo $SINGLE_LINE
 #echo TOKEN DEPLOYMENTS COMPLETE
 #echo $DOUBLE_LINE
