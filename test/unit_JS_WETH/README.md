@@ -7,8 +7,8 @@
 
 ### To develop for package management be sure the two lines in the index.js ar as follows.
     Note: the "Node Deployed" version is commented out and the "Development" version is not.
-        const { WethMethods } = require("../../spcoin-access-modules/spcoin-weth-module/wethMethods.js");
-        // const { WethMethods } = require("@sponsorcoin/spcoin-access-modules/spcoin-weth-module/wethMethods.js");
+        const { WethMethods } = require("../../spcoin-access-modules/sponsorcoin/spcoin-weth-module-cjs/wethMethods.js");
+        // const { WethMethods } = require("@sponsorcoin/spcoin-access-modules/sponsorcoin/spcoin-weth-module-cjs/wethMethods.js");
 ### When development is complete, you can publish the package to the Node repository as follows:
     1. Change directory to git sub-module spcoin-access-modules.
     2. Update the "version": "X.X.X" in the package.json since the package cannot overwrite a previously published version.
@@ -22,8 +22,8 @@
        "npm install @sponsorcoin/spcoin-access-modules"
     2. Change the directory to run the Node deployed version instead of the development version as follows:
         Note: the "Development" version is commented out and the "Node Deployed" version is not.
-            // const { WethMethods } = require("../../spcoin-access-modules/spcoin-weth-module/wethMethods.js");
-            const { WethMethods } = require("@sponsorcoin/spcoin-access-modules/spcoin-weth-module/wethMethods.js");
+            // const { WethMethods } = require("../../spcoin-access-modules/sponsorcoin/spcoin-weth-module-cjs/wethMethods.js");
+            const { WethMethods } = require("@sponsorcoin/spcoin-access-modules/sponsorcoin/spcoin-weth-module-cjs/wethMethods.js");
     3.  If you have the alias setup you can run the test from the package root level by typing, "hhtest",
         which will run the test and put the output in directory {./rootHome}/test.out/hhtest.out.
         If you do not have the alias's menu installed, run the command "npx hardhat test". 
