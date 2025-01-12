@@ -1,6 +1,6 @@
 #INITIALIZE SCRIPT STARTUP
 clear
-CURR_DIR=$(PWD)
+CURR_DIR=$PWD
 cd $ACTIVE_PROJECT_PATH
 SINGLE_LINE="-----------------------------------------------------------------------"
 DOUBLE_LINE="======================================================================="
