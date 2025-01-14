@@ -16,6 +16,6 @@ exeIfDirExists() {
 clear
 echo "======================spcoin-hardhat-contract-access-test================================="
 pwd
-exeIfDirExist cd ./node_modules-dev/spcoin-common/spcoin-lib npm i
-exeIfDirExist ./node_modules-dev/spcoin-back-end/spcoin-access-modules npm i
-exeIfDirExist ./node_modules-dev/spcoin-back-end/spcoin-weth-module-cjs npm i
+exeIfDirExists "cd ./node_modules-dev/spcoin-common/spcoin-lib" npm i
+exeIfDirExists ./node_modules-dev/spcoin-back-end/spcoin-access-modules npm i
+exeIfDirExists ./node_modules-dev/spcoin-back-end/spcoin-weth-module-cjs npm i
