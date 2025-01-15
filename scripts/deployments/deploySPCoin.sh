@@ -1,1 +1,1 @@
-npx hardhat ignition deploy $ACTIVE_PROJECT_PATH/ignition/modules/deploySPCoin.js --network localhost 
+npx hardhat ignition deploy $ACTIVE_PROJECT_HOME/ignition/modules/deploySPCoin.js --network localhost 

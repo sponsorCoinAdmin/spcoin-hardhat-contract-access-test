@@ -1,1 +1,1 @@
-npx hardhat ignition deploy $ACTIVE_PROJECT_PATH/ignition/modules/deployApollo.js    
+npx hardhat ignition deploy $ACTIVE_PROJECT_HOME/ignition/modules/deployApollo.js    

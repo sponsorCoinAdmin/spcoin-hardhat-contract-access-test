@@ -1,13 +1,13 @@
 #INITIALIZE SCRIPT STARTUP
 clear
 CURR_DIR=$PWD
-cd $ACTIVE_PROJECT_PATH
+cd $ACTIVE_PROJECT_HOME
 SINGLE_LINE="-----------------------------------------------------------------------"
 DOUBLE_LINE="======================================================================="
 echo $DOUBLE_LINE
 echo CHANGING DIRECTORY
 echo from: $CURR_DIR 
-echo to  : $ACTIVE_PROJECT_PATH/scripts
+echo to  : $ACTIVE_PROJECT_HOME/scripts
 
 #START HARDHAT
 echo $SINGLE_LINE
