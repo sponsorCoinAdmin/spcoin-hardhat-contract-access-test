@@ -18,5 +18,3 @@ exeIfDirExists() {
 echo "===================== spcoin-hardhat-contract-access-test ==============================="
 pwd
 exeIfDirExists ./node_modules-dev " . ./scripts/installNodeSubModules.sh"
-# exeIfDirExists ./node_modules-dev/spcoin-back-end/spcoin-access-modules "npm i"
-# exeIfDirExists ./node_modules-dev/spcoin-back-end/spcoin-weth-module-cjs "npm i"
