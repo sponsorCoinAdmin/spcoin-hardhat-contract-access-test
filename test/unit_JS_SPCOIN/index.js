@@ -1,18 +1,3 @@
-// const { 
-//   dateInMilliseconds, 
-//   dateInSeconds, 
-//   second, minute,
-//    hour, 
-//    day, 
-//    week, 
-//    year, 
-//    month, 
-//   //  millennium } = require( "../../../node_modules-dev/spcoin-common/spcoin-lib"); 
-//    millennium } = require( "../../../node_modules-dev/spcoin-back-end/spcoin-common/spcoin-lib"); 
-
-
-
-   //  millennium } = require( "../../spcoin-access-modules/utils/dateTime"); 
 const { assert } = require ('chai');
 const { HHAccountRateMethods } = require("../lib/hhAccountRateMethods");
 const { deploySpCoinContract, getDeployedArtifactsABIAddress } = require("../lib/deployContract");
