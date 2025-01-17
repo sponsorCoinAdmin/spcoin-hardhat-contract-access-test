@@ -7,14 +7,14 @@ const {
    week, 
    year, 
    month, 
-   millennium } = require( "../../node_modules-dev/spcoin-back-end/spcoin-access-modules/utils/dateTime"); 
+   millennium } = require( "../../../../node_modules-dev/spcoin-back-end/spcoin-access-modules/utils/dateTime"); 
 
 
    //  millennium } = require( "../../spcoin-access-modules/utils/dateTime"); 
 const { assert } = require ('chai');
 const { HHAccountRateMethods } = require("../lib/hhAccountRateMethods");
 const { deploySpCoinContract, getDeployedArtifactsABIAddress } = require("../lib/deployContract");
-const { SpCoinAccessModules } = require("../../node_modules-dev/spcoin-back-end/spcoin-access-modules/index.js");
+const { SpCoinAccessModules } = require("../../../..//node_modules-dev/spcoin-back-end/spcoin-access-modules/index.js");
 // const { SpCoinAccessModules } = require("@sponsorcoin/spcoin-access-modules/index");
 
 let signer;
