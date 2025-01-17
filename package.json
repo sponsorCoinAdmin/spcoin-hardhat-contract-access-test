@@ -9,7 +9,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no spcoin-hardhat-contract-access-test tests specified\" && exit 1",
-    "preinstall": "bash ./scripts/installNodeSubModules.sh",
+    "preinstall": "echo 'ToDo:bash ./scripts/installNodeSubModules.sh'",
     "postinstall": "echo postinstall spcoin-hardhat-contract-access-test Installation Complete",
     "installNodeSubModules": "echo Installing SPCOIN-PROJECT-MODULES; . ./scripts/installNodeSubModules.sh"
   },
