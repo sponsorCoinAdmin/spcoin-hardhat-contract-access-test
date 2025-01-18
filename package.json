@@ -1,8 +1,9 @@
 {
-  "name": "dev-contracts-spcoin",
+  "name": "spcoin-hardhat-contract-access-test",
   "version": "1.0.0",
   "description": "// TESTING",
   "main": "hardhat.config.js",
+  "private": false,
   "directories": {
     "doc": "docs",
     "test": "test"
