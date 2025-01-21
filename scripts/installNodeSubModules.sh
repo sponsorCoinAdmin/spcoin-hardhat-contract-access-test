@@ -8,7 +8,7 @@ exeIfDirExists() {
         cd $DIRECTORY
         echo "EXECUTING: $COMMAND"
         eval $COMMAND
-    else 
+    else
         echo "***ERROR: SUB-DIRECTORY $DIRECTORY NOT FOUND"
         echo "***ERROR: COMMAND $COMMAND NOT EXECUTED" 
     fi
@@ -17,4 +17,4 @@ exeIfDirExists() {
 
 echo "===================== spcoin-hardhat-contract-access-test ==============================="
 pwd
-exeIfDirExists ./node_modules-dev " . ./scripts/installNodeSubModules.sh"
+exeIfDirExists ./node_modules-dev ". ./scripts/installNodeSubModules.sh"
