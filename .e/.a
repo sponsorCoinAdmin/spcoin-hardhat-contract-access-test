@@ -33,10 +33,7 @@ alias deploytokens=". $ACTIVE_SCRIPTS_PATH/deployTokens.sh"
 alias deployapollo=". $ACTIVE_SCRIPTS_PATH/deployments/deployApollo.sh"
 alias deploychicken=". $ACTIVE_SCRIPTS_PATH/deployments/deployChickenCoin.sh"
 alias deployspcoin=". $ACTIVE_SCRIPTS_PATH/deployments/deploySPCoin.sh"
-alias deployusdc=". $ACTIVE_SCRIPTS_PATH/deployments/deployUSDC.sh"
-alias deployusdt=". $ACTIVE_SCRIPTS_PATH/deployments/deployUSDT.sh"
 alias deployweth=". $ACTIVE_SCRIPTS_PATH/deployments/deployWeth.sh"
-
 alias deployusdc=". $ACTIVE_SCRIPTS_PATH/deployments/deployUSDC.sh"
 alias deployusdt=". $ACTIVE_SCRIPTS_PATH/deployments/deployUSDT.sh"
 
