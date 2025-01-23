@@ -25,7 +25,7 @@
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.1.7",
     "@remix-project/remixd": "^0.6.16",
-    "@sponsorcoin/spcoin-access-modules-cjs": "^1.0.31",
+    "@sponsorcoin/spcoin-access-modules-cjs": "^1.0.0",
     "@sponsorcoin/spcoin-lib": "^1.0.0",
     "@sponsorcoin/weth-module": "^1.0.0"
   }
