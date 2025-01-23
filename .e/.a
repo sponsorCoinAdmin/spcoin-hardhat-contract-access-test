@@ -14,7 +14,7 @@ alias vg="sethh; vi .gitignore"
 alias vs="code"
 
 # NPM SETUP
-alias npmi="npm install @sponsorcoin/spcoin-access-modules"
+alias npmi="npm install @sponsorcoin/spcoin-access-modules-cjs"
 alias npmp="npm publish"
 
 alias cdnmp:="cdhh; cd node_modules-dev/bg"

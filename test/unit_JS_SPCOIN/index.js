@@ -1,9 +1,9 @@
 const { assert } = require ('chai');
 const { HHAccountRateMethods } = require("../lib/hhAccountRateMethods");
 const { deploySpCoinContract, getDeployedArtifactsABIAddress } = require("../lib/deployContract");
-const { SpCoinAccessModules } = require("../../../node_modules-dev/spcoin-back-end/spcoin-access-modules");
-// const { SpCoinAccessModules } = require("../../..//node_modules-dev/spcoin-back-end/spcoin-access-modules/index.js");
-// const { SpCoinAccessModules } = require("@sponsorcoin/spcoin-access-modules/index");
+const { SpCoinAccessModules } = require("../../../node_modules-dev/spcoin-back-end/spcoin-access-modules-cjs");
+// const { SpCoinAccessModules } = require("../../..//node_modules-dev/spcoin-back-end/spcoin-access-modules-cjs/index.js");
+// const { SpCoinAccessModules } = require("@sponsorcoin/spcoin-access-modules-cjs/index");
 
 let signer;
 let spCoinAddress;
