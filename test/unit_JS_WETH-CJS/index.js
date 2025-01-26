@@ -9,8 +9,8 @@ const { deployWETH9Contract, deploySpCoinContract, getDeployedArtifactsABIAddres
 // const { WethMethods, HARDHAT } = require("@sponsorcoin/spcoin-access-modules-cjs/accessModules.js");
 // const { WethMethods, HARDHAT }  = require("@sponsorcoin/weth-module/wethMethods");
 // const { WethMethods, HARDHAT } = require("../../../../node_modules-dev/spcoin-back-end/spcoin-weth-module-cjs/index.js");
-// const { WethMethods, HARDHAT } = require("../../../node_modules-dev/spcoin-back-end/spcoin-weth-module-cjs/index.js");
 const { WethMethods, HARDHAT } = require("../../../node_modules-dev/spcoin-back-end/weth-access-module-cjs");
+
 
 let signer;
 let weth9Address;
