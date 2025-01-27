@@ -1,7 +1,7 @@
 const { assert } = require ('chai');
 const fs = require('fs')
 
-let ethers = hre.ethers;
+const ethers = hre.ethers;
 
 let spCoinContractDeployed;
 

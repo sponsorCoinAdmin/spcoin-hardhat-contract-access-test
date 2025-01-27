@@ -2,7 +2,7 @@ import { assert } from 'chai';
 import { HHAccountRateMethods } from "../lib/hhAccountRateMethods.js";
 import { stringifyBigInt } from "@sponsorcoin/spcoin-lib/utils.js";
 import { deployWETH9Contract, deploySpCoinContract, getDeployedArtifactsABIAddress, getWeth9Contract } from "../lib/deployContract.js";
-import { WethMethods, HARDHAT } from "../../../node_modules-dev/spcoin-back-end/weth-access-module-es6";
+import { WethMethods, HARDHAT } from "../../../node_modules-dev/spcoin-back-end/weth-access-module-es6/index.js";
 
 let signer;
 let weth9Address;
