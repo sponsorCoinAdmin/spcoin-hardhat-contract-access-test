@@ -199,5 +199,4 @@ describe("WETH9 Contract Deployed", function () {
     tx = await wethMethods.withdrawWEI(weiWithdrawAmount)
     // console.log(`tx(${wethMethods.withdrawETH(ethWithdrawAmount)} = ${JSON.stringify(tx,null,2)}`);
   });
-
 });

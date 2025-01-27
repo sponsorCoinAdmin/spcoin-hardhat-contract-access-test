@@ -1,21 +1,7 @@
-const { 
-  dateInMilliseconds, 
-  dateInSeconds, 
-  second, minute,
-   hour, 
-   day, 
-   week, 
-   year, 
-   month, 
-   millennium } = require( "../../node_modules-dev/spcoin-back-end/spcoin-access-modules-cjs/utils/dateTime"); 
-
-
-   //  millennium } = require( "../../spcoin-access-modules-cjs/utils/dateTime"); 
-const { assert } = require ('chai');
-const { HHAccountRateMethods } = require("../lib/hhAccountRateMethods");
-const { deploySpCoinContract, getDeployedArtifactsABIAddress } = require("../lib/deployContract");
-const { SpCoinAccessModules } = require("../../node_modules-dev/spcoin-back-end/spcoin-access-modules-cjs/index.js");
-// const { SpCoinAccessModules } = require("@sponsorcoin/spcoin-access-modules-cjs/index");
+import { assert } from 'chai';
+import { HHAccountRateMethods } from "../lib/hhAccountRateMethods.js";
+import { deploySpCoinContract, getDeployedArtifactsABIAddress } from "../lib/deployContract.js";
+import { SpCoinAccessModules } from "../../../node_modules-dev/spcoin-back-end/spcoin-access-modules-cjs/index.js";
 
 let signer;
 let spCoinAddress;
@@ -32,17 +18,15 @@ let BURN_ADDRESS;
 
 describe("spCoinContract", function () {
   beforeEach(async () => {
-
     hHAccountRateMethods = new HHAccountRateMethods();
-    await hHAccountRateMethods.initHHAccounts()
+    await hHAccountRateMethods.initHHAccounts();
     SPONSOR_ACCOUNT_SIGNERS = hHAccountRateMethods.SPONSOR_ACCOUNT_SIGNERS;
     SPONSOR_ACCOUNT_KEYS = hHAccountRateMethods.SPONSOR_ACCOUNT_KEYS;
     RECIPIENT_ACCOUNT_KEYS = hHAccountRateMethods.RECIPIENT_ACCOUNT_KEYS;
     AGENT_ACCOUNT_KEYS = hHAccountRateMethods.AGENT_ACCOUNT_KEYS;
     AGENT_RATES = hHAccountRateMethods.AGENT_RATES;
     RECIPIENT_RATES = hHAccountRateMethods.RECIPIENT_RATES;
-    BURN_ADDRESS =  hHAccountRateMethods.BURN_ADDRESS;
-    
+    BURN_ADDRESS = hHAccountRateMethods.BURN_ADDRESS;
 
     signer = SPONSOR_ACCOUNT_SIGNERS[0];
     spCoinContractDeployed = await deploySpCoinContract();
@@ -52,7 +36,7 @@ describe("spCoinContract", function () {
     spCoinABI = abi;
   });
 
-  it("1. <TYPE SCRIPT> VALIDATE HARDHAT IS ACTIVE WITH ACCOUNTS", async function () {
+  it("1. <TYPE SCRIPT> VALIDATE HARDHAT IS ACTIVE WITH ACCOUNTS", async () => {
     hHAccountRateMethods.dump();
     console.log(`signer.address = ${signer.address}`);
 
@@ -60,29 +44,24 @@ describe("spCoinContract", function () {
     assert.equal(hHAccountRateMethods.SPONSOR_ACCOUNT_SIGNERS.length, 20);
 
     // Validate Active signer Account is Account 0
-    console.log(`hHAccountRateMethods.SPONSOR_ACCOUNT_SIGNERS[0].address = ${hHAccountRateMethods.SPONSOR_ACCOUNT_SIGNERS[0].address}`)
+    console.log(`hHAccountRateMethods.SPONSOR_ACCOUNT_SIGNERS[0].address = ${hHAccountRateMethods.SPONSOR_ACCOUNT_SIGNERS[0].address}`);
     
     // Validate the Last Account
     assert.equal(hHAccountRateMethods.SPONSOR_ACCOUNT_KEYS[19], "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199");
   });
 
- it("2. <JAVA SCRIPT> VALIDATE ADD TRANSACTION RATES", async function () {
-  let spCoinClassModules = new SpCoinAccessModules(spCoinABI, spCoinAddress, signer);
-  let spCoinAddMethods = spCoinClassModules.spCoinAddMethods;
-  let spCoinRewardsMethods = spCoinClassModules.spCoinRewardsMethods;
-  let spCoinReadMethods = spCoinClassModules.spCoinReadMethods;
-  let spCoinLogger = spCoinClassModules.spCoinLogger;
+  it("2. <JAVA SCRIPT> VALIDATE ADD TRANSACTION RATES", async () => {
+    const spCoinClassModules = new SpCoinAccessModules(spCoinABI, spCoinAddress, signer);
+    const { spCoinAddMethods, spCoinRewardsMethods, spCoinReadMethods, spCoinLogger } = spCoinClassModules;
 
-  // Test Successful Record Insertion of Sponsor and 
-  // Recipient Account to the Blockchain Network.
-  // Account, Recipient and/or Agent are Successfully mutually exclusive.
-
-  await spCoinAddMethods.addSponsorship(
-    SPONSOR_ACCOUNT_SIGNERS[0],
-    RECIPIENT_ACCOUNT_KEYS[1],
-    RECIPIENT_RATES[9],
-    "1.000000000000000008"
-  );
+    // Test Successful Record Insertion of Sponsor and 
+    // Recipient Account to the Blockchain Network.
+    await spCoinAddMethods.addSponsorship(
+      SPONSOR_ACCOUNT_SIGNERS[0],
+      RECIPIENT_ACCOUNT_KEYS[1],
+      RECIPIENT_RATES[9],
+      "1.000000000000000008"
+    );
 
   // await spCoinAddMethods.addSponsorship(
   //   SPONSOR_ACCOUNT_SIGNERS[1],
