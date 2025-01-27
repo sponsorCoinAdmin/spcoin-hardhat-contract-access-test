@@ -3,7 +3,7 @@ import { HHAccountRateMethods } from "../lib/hhAccountRateMethods.js";
 import { stringifyBigInt } from "@sponsorcoin/spcoin-lib/utils.js";
 import { deployWETH9Contract, deploySpCoinContract, getDeployedArtifactsABIAddress, getWeth9Contract } from "../lib/deployContract.js";
 import { WethMethods, HARDHAT } from "../../../node_modules-dev/spcoin-back-end/weth-access-module-es6/index.js";
-
+// import { WethMethods, HARDHAT } from "@sponsorcoin/weth-access-module-es6"
 let signer;
 let weth9Address;
 let weth9ABI;

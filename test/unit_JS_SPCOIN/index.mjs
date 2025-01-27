@@ -1,7 +1,8 @@
 import { assert } from 'chai';
 import { HHAccountRateMethods } from "../lib/hhAccountRateMethods.js";
 import { deploySpCoinContract, getDeployedArtifactsABIAddress } from "../lib/deployContract.js";
-import { SpCoinAccessModules } from "../../../node_modules-dev/spcoin-back-end/spcoin-access-modules-cjs/index.js";
+// import { SpCoinAccessModules } from "../../../node_modules-dev/spcoin-back-end/spcoin-access-modules-cjs/index.js";
+import { SpCoinAccessModules } from "@sponsorcoin/spcoin-access-modules-cjs"
 
 let signer;
 let spCoinAddress;
