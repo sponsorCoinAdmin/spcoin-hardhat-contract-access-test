@@ -23,12 +23,12 @@
     "hardhat-contract-sizer": "^2.10.0"
   },
   "dependencies": {
-    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
     "@remix-project/remixd": "^0.6.16",
-    "@sponsorcoin/spcoin-access-modules-cjs": "^1.0.4",
+    "@sponsorcoin/spcoin-access-modules-cjs": "^1.0.6",
     "@sponsorcoin/spcoin-lib": "^1.0.0",
-    "@sponsorcoin/weth-access-module-cjs": "^1.0.0",
-    "@sponsorcoin/weth-access-module-es6": "^1.0.3",
+    "@sponsorcoin/weth-access-module-cjs": "^1.0.2",
+    "@sponsorcoin/weth-access-module-es6": "^1.0.4",
     "@sponsorcoin/weth-module": "^1.0.0"
   }
 }
