@@ -1,4 +1,3 @@
-const { assert } = require ('chai');
 const fs = require('fs')
 
 const ethers = hre.ethers;

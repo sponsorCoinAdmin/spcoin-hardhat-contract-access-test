@@ -27,8 +27,8 @@
     "@remix-project/remixd": "^0.6.16",
     "@sponsorcoin/spcoin-access-modules-cjs": "^1.0.4",
     "@sponsorcoin/spcoin-lib": "^1.0.0",
-    "@sponsorcoin/weth-access-module-es6": "^1.0.2",
-    "@sponsorcoin/weth-access-modules-cjs": "^1.0.0",
+    "@sponsorcoin/weth-access-module-cjs": "^1.0.0",
+    "@sponsorcoin/weth-access-module-es6": "^1.0.3",
     "@sponsorcoin/weth-module": "^1.0.0"
   }
 }
