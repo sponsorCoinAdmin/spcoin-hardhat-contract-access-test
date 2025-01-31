@@ -45,3 +45,5 @@ alias forksepolia="sethh; npx hardhat node --fork https://sepolia.infura.io/v3/0
 
 alias lockedport="netstat -ano| grep 8545 | xargs | cut -d ' ' -f 5"
 alias freeport="npx kill-port $(lockedport)"
+
+alias gitall="git status; git add *; git commit -m "WIP"; git push; git status"
