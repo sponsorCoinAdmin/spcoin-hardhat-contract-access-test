@@ -28,7 +28,7 @@
     "@sponsorcoin/spcoin-access-modules-cjs": "^1.0.6",
     "@sponsorcoin/spcoin-lib": "^1.0.0",
     "@sponsorcoin/weth-access-module-cjs": "^1.0.2",
-    "@sponsorcoin/weth-access-module-es6": "^1.0.4",
+    "@sponsorcoin/weth-access-module-es6": "^1.0.5",
     "@sponsorcoin/weth-module": "^1.0.0"
   }
 }
